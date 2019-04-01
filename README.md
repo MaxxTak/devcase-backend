@@ -72,3 +72,14 @@ Portanto, se não conseguir fazer algo, não desanime! Descreva para nós como i
 
 [E aí, tá pronto?] 
 (https://www.facebook.com/vsmsoftwares/videos/2104869086431667/)
+
+=========================================================================================
+Rotas (CRUD) : 
+/vendas (campos POST e PUT => cliente_id, vendedor_id, pdv_id, valor)
+/pontuacao (campos POST e PUT => min, max e valor) obs: min e max são os limites inferiores e superiores para atribuir pontos
+/clientes (campos POST e PUT => nome, cpf, email, sexo, endereco, cep, numero, complemento, bairro, cidade, estado)
+
+Rotas de consulta:
+pontuação por cliente = /pontuacao/pontos/cliente/{clienteId} exemplo: http://localhost:8080/pontuacao/pontos/cliente/2
+vendas por genero = /vendas/genero/?genero={genero}  obs: genero é m ou f
+vendas por periodo = /vendas/periodo/?dataI={dataI}&dataF={dataF} exemplo = http://localhost:8080/vendas/periodo/?dataI="2019-01-01"&dataF="2019-05-01"
